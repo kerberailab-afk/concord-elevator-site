@@ -161,7 +161,12 @@ footer{background:#0C1B30;color:#B4C2D4;padding:62px 0 34px}
 .foot-bottom{display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.12);margin-top:42px;padding-top:24px;font-size:13px;flex-wrap:wrap;gap:10px}
 .mobilecall{display:none}
 @media(max-width:900px){
-  .nav-links{display:none}.menu-btn{display:block;font-size:26px;background:none;border:none;color:var(--navy)}
+  .menu-btn{display:block;font-size:26px;background:none;border:none;color:var(--navy);cursor:pointer;line-height:1}
+  .nav-links{display:none}
+  .nav-links.open{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 14px 26px -12px rgba(13,40,80,.2);padding:6px 22px 18px}
+  .nav-links.open a{padding:14px 2px;font-size:17px;color:var(--navy);border-bottom:1px solid var(--line)}
+  .nav-links.open a.callbtn{display:inline-flex;justify-content:center;margin-top:12px;border-bottom:none}
+  .nav-links.open a.pill{display:block;text-align:center;margin-top:12px;border-bottom:none}
   .callbtn{display:none}
   .hero-grid,.adu-grid,.contact-grid,.detail{grid-template-columns:1fr;gap:38px}.adu-grid .panel{max-width:520px}
   .detail.flip .txt{order:0}
